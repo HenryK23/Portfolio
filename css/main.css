@@ -75,20 +75,17 @@ header a {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  width: 200px;
+  width: 300px;
   font-weight: bold;
   color: #1B1A17;
-  text-align: right;
-}
-
-.meet span {
-  margin-top: 1em;
-  margin-right: .5em;
+  text-align: left;
+  font-size: 1.5em;
 }
 
 .arrow {
   width: 30px;
-  margin-top: 2em;
+  height: 200px;
+  margin-right: -0.35em;
 }
 
 section {
@@ -237,11 +234,17 @@ section {
   .nav-container header {
     background: #F47E04;
   }
+  .nav-container .logo {
+    font-size: 2em;
+    margin-left: -1em;
+  }
   .header {
     padding: 2em 2em 2em 4em;
   }
-  .social-header {
-    padding: 2em 4em 2em 0;
+  .social-header ul li img {
+    padding: 1em 6em 1em 0em;
+    width: 30%;
+    height: auto;
   }
   section {
     padding: 2em;

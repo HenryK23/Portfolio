@@ -33,23 +33,25 @@
 
     <div class="hero">
         <div class="content">
-            <h1>Im a Developer...</h1>
-            <div class="meet">
-                <p> I'm Henry keene</p>
+            <h1 class="stagger1" id="app">Im a Developer...</h1>
+            <div class="meet stagger1">
+                
+                <svg class="arrow stagger1" width="52" height="228" viewBox="0 0 52 228" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M23.5251 226.475C24.892 227.842 27.108 227.842 28.4749 226.475L50.7487 204.201C52.1156 202.834 52.1156 200.618 50.7487 199.251C49.3819 197.884 47.1658 197.884 45.799 199.251L26 219.05L6.20101 199.251C4.83417 197.884 2.6181 197.884 1.25126 199.251C-0.115572 200.618 -0.115572 202.834 1.25126 204.201L23.5251 226.475ZM22.5 -3.02181e-09L22.5 224L29.5 224L29.5 3.02181e-09L22.5 -3.02181e-09Z" fill="#1B1A17"/>
+                    </svg>
+                    <p class="meetText"> 'm Henry Keene</p>
             </div>
-            <svg class="arrow" width="52" height="228" viewBox="0 0 52 228" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M23.5251 226.475C24.892 227.842 27.108 227.842 28.4749 226.475L50.7487 204.201C52.1156 202.834 52.1156 200.618 50.7487 199.251C49.3819 197.884 47.1658 197.884 45.799 199.251L26 219.05L6.20101 199.251C4.83417 197.884 2.6181 197.884 1.25126 199.251C-0.115572 200.618 -0.115572 202.834 1.25126 204.201L23.5251 226.475ZM22.5 -3.02181e-09L22.5 224L29.5 224L29.5 3.02181e-09L22.5 -3.02181e-09Z" fill="#1B1A17"/>
-                </svg>
+           
         </div>
 
 
         <svg width="370" height="665" viewBox="0 0 370 665" fill="none" xmlns="http://www.w3.org/2000/svg" class="hero-design">
-            <circle cx="92.5" cy="572.5" r="92.5" fill="#F0E3CA"/>
-            <circle cx="92.5" cy="337.5" r="92.5" fill="#F0E3CA"/>
-            <circle cx="92.5" cy="93.5" r="92.5" fill="#F0E3CA"/>
-            <circle cx="277.5" cy="332.5" r="92.5" fill="#1B1A17"/>
-            <circle cx="277.5" cy="92.5" r="92.5" fill="#1B1A17"/>
-            <circle cx="277.5" cy="572.5" r="92.5" fill="#1B1A17"/>
+            <circle class="circleAnim" cx="92.5" cy="572.5" r="92.5" fill="#F0E3CA"/>
+            <circle class="circleAnim" cx="92.5" cy="337.5" r="92.5" fill="#F0E3CA"/>
+            <circle class="circleAnim" cx="92.5" cy="93.5" r="92.5" fill="#F0E3CA"/>
+            <circle class="circleAnim" cx="277.5" cy="332.5" r="92.5" fill="#1B1A17"/>
+            <circle class="circleAnim" cx="277.5" cy="92.5" r="92.5" fill="#1B1A17"/>
+            <circle class="circleAnim" cx="277.5" cy="572.5" r="92.5" fill="#1B1A17"/>
             </svg>        
     </div>
 
@@ -124,6 +126,77 @@
             <a href=""><img src="images/paraWeb.png"alt="paraWeb"></a>
         </div>
     </section>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js" integrity="sha512-cdV6j5t5o24hkSciVrb8Ki6FveC2SgwGfLE31+ZQRHAeSRxYhAQskLkq3dLm8ZcWe1N3vBOEYmmbhzf7NTtFFQ==" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/ScrollTrigger.min.js" integrity="sha512-Q+G390ZU2qKo+e4q+kVcJknwfGjKJOdyu5mVMcR95NqL6XaF4lY4nsSvIVB3NDP54ACsS9rqhE1DVqgpApl//Q==" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script>
+        gsap.registerPlugin(ScrollTrigger);
+        var tl = gsap.timeline();
+
+        tl.from('.content',{
+            y:'-40%',
+            opacity:0,
+            duration:2,
+            ease: Power4.easeOut
+        })
+        tl.from('.stagger1', {
+            opacity:0,
+            y:-50,
+            stagger:.3,
+            ease: Power4.easeOut,
+            duration:2
+            
+        }, "-=2")
+
+        tl.from('.hero-design',{
+            opacity:0, y:50, ease: Power4.easeOut, duration:3
+        },"0.5" )
+        gsap.from(".circleAnim", {
+            stagger:.2,
+            scale:0.1,
+            duration:1,
+            ease:Back.easeOut.config(1.7)
+        })
+        gsap.from(".transition2", {
+            scrollTrigger:{
+                trigger:'.transition2',
+                start:"top bottom"
+            },
+            y:50,
+            opacity:0,
+            duration:1.2,
+            stagger:.3
+        })
+        gsap.from(".transition3", {
+            scrollTrigger:{
+                trigger:'.transition3',
+                start:"top center"
+            },
+            y:50,
+            opacity:0,
+            duration:1.2,
+            stagger:.6
+        })
+
+        var app = document.getElementById('app');
+
+        var typewriter = new Typewriter(app, {
+            loop: true,
+            delay:50
+        });
+
+        typewriter.typeString('Im a UX Designer...')
+            .pauseFor(1000)
+            .deleteChars(14)
+            .typeString('Game Developer')
+            .pauseFor(1000)
+            .deleteChars(14)
+            .typeString('Web Developer')
+            .pauseFor(1000)
+            .start();
+    </script>
+
 
 </body>
 </html>
