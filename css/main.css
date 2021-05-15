@@ -75,7 +75,7 @@ header a {
   display: -ms-flexbox;
   display: flex;
   margin: 0 auto;
-  width: 300px;
+  width: 150px;
   font-weight: bold;
   color: #1B1A17;
   text-align: left;
@@ -84,7 +84,7 @@ header a {
 
 .arrow {
   width: 30px;
-  height: 100px;
+  height: 200px;
   margin-right: -0.35em;
 }
 
@@ -181,17 +181,64 @@ section {
   margin-bottom: 2em;
 }
 
+.about {
+  position: relative;
+  background: #FF8303;
+  z-index: -2;
+}
+
+.about-container a img {
+  border-radius: 1em;
+  margin-bottom: 2em;
+  width: 50%;
+}
+
+.contact-title {
+  margin-bottom: 5em;
+}
+
+.contact-title .contact-subtitle {
+  margin-top: -3.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #FF8303;
+  letter-spacing: .1em;
+  font-size: .5em;
+}
+
+.contact-container ul li {
+  margin-bottom: 2em;
+}
+
+.contact-container ul li .icon-container {
+  width: 25px;
+}
+
+.contact-container ul li .about-information {
+  font-weight: bold;
+  text-align: left;
+  margin-top: -2em;
+  margin-left: 2em;
+}
+
+.contact-container ul li .about-desc {
+  font-weight: medium;
+  text-align: left;
+  margin-top: -2.55em;
+  margin-left: 6em;
+}
+
 @media only screen and (min-width: 800px) {
-  .featured, .portfolio {
+  .featured, .portfolio, .about {
     text-align: left;
   }
-  .featured, .portfolio-container {
+  .featured, .portfolio-container, .about-container {
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 40% auto;
         grid-template-columns: 40% auto;
   }
-  .left, .portfolio-left {
+  .left, .portfolio-left, .about-left {
     display: -ms-grid;
     display: grid;
     place-content: center;
@@ -215,7 +262,7 @@ section {
   .portfolio {
     padding-top: 7em;
   }
-  .portfolio-container img {
+  .portfolio-container, .about-container img {
     margin-left: 2em;
   }
 }
@@ -271,7 +318,7 @@ section {
     -ms-grid-columns: 66% auto;
         grid-template-columns: 66% auto;
     background: unset;
-    padding: 0;
+    padding: 0em;
   }
   .hero .content {
     background: #FF8303;
@@ -280,10 +327,12 @@ section {
   }
   .hero .content h1 {
     font-size: 3em;
-    line-height: 1.2em;
+    line-height: 0.5em;
   }
   .meet {
-    margin: unset;
+    margin-left: -0.5em;
+    margin-top: 1em;
+    width: 200px;
   }
   .hero-design {
     display: unset;
