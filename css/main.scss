@@ -64,6 +64,8 @@ header{
     color:#F0E3CA;
     display:grid;
     text-align:center;
+    
+    font-size: 0.8em;
     padding:4em;
 }
 .meet{
@@ -76,6 +78,7 @@ header{
     font-size:1.5em;  
 
 }
+
 .arrow{
    
   
@@ -277,6 +280,7 @@ section{
 @media only screen and (min-width:1050px){
     .hero{
         height:90vh;
+        font-size:unset;
 
     }
 
