@@ -98,7 +98,7 @@ section{
 .featured{
     position:relative;
 }
-.featured::before{
+/*.featured::before{
     content:"";
     position:absolute;
     width:200px;
@@ -110,6 +110,7 @@ section{
     z-index:-1;
 
 }
+*/
 
 .subtitle{
     text-transform: uppercase;
@@ -133,9 +134,18 @@ section{
     line-height:1.8em;
     font-weight:500;
 }
+.btnGit img{
+    
+    width:25%;
+}
 
 .skills{
     background: #1B1A17;
+
+}
+.skills-container{
+    margin-top:-3em;
+    padding-bottom:5em;
 
 }
 .skills-container ul li{
@@ -152,7 +162,6 @@ section{
 
         &.one{
             width:50px;
-
         }
         &.two{
             width:50px
@@ -160,18 +169,24 @@ section{
         &.three{
             width:50px;
         }
+        &.four{
+            width:50px;
+        }
+        &.five{
+            width:50px;
+        }
+        &.six{
+            width:50px;
+        }
+
     }
 
     .skill-title{
         font-weight:bold;
-
-
     }
     .featured-description{
         margin-bottom:2em;
-
     }
-    
 }
 .portfolio{
     background:white;
@@ -243,6 +258,8 @@ section{
     .featured, .portfolio-container, .about-container{
         display:grid;
         grid-template-columns: 40% auto;
+        margin-top:3em;
+        margin-bottom:3em;
     }
 
     .left, .portfolio-left, .about-left{
@@ -251,8 +268,17 @@ section{
         
     }
     .right{
+        padding-left: 10em;
         margin-left:2em;
         margin-top:1em;
+
+        .subtitle .featured-title{
+            text-align:left;
+            
+        }
+        .featured-description{
+            text-align:right;
+        }
 
     }
 
@@ -369,8 +395,13 @@ section{
     }
 
     .portfolio img{
-        float:right;
+        
         max-width: 500px;
+    }
+
+    .portfolio-image img{
+        float:right;
+        
     }
      
 
