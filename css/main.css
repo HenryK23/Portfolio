@@ -273,6 +273,10 @@ section {
     margin-left: 2em;
     margin-top: 1em;
   }
+  .right .img {
+    max-height: 550px;
+    max-width: 250px;
+  }
   .right .subtitle .featured-title {
     text-align: left;
   }
@@ -305,6 +309,7 @@ section {
     font-size: unset;
   }
   .nav-container {
+    height: 10%;
     display: -ms-grid;
     display: grid;
     -ms-grid-columns: 66% auto;
@@ -315,14 +320,15 @@ section {
     background: #F47E04;
   }
   .nav-container .logo {
-    font-size: 2em;
+    font-size: 1.5em;
     margin-left: -1em;
+    margin-bottom: 1em;
   }
   .header {
     padding: 2em 2em 2em 4em;
   }
   .social-header ul li img {
-    padding: 1em 6em 1em 0em;
+    padding: 1em 5em 1em 0em;
     width: 30%;
     height: auto;
   }

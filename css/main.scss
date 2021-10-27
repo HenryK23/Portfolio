@@ -271,6 +271,11 @@ section{
         padding-left: 10em;
         margin-left:2em;
         margin-top:1em;
+        
+        .img{
+        max-height: 550px;
+        max-width: 250px;
+        }
 
         .subtitle .featured-title{
             text-align:left;
@@ -279,6 +284,7 @@ section{
         .featured-description{
             text-align:right;
         }
+        
 
     }
 
@@ -311,18 +317,21 @@ section{
     }
 
     .nav-container{
+        height:10%;
         display:grid;
         grid-template-columns: 66% auto;
         background:unset;
 
         header{
             background: #F47E04;
+            ////#F0E3CA 
             
     
         }
         .logo{
-            font-size: 2em;
+            font-size: 1.5em;
             margin-left:-1em;
+            margin-bottom:1em;
         }
 
     }
@@ -332,7 +341,7 @@ section{
 
     }
     .social-header ul li img{
-        padding:1em 6em 1em 0em;
+        padding:1em 5em 1em 0em;
         width:30%;
         height:auto;
 
@@ -397,6 +406,7 @@ section{
     .portfolio img{
         
         max-width: 500px;
+
     }
 
     .portfolio-image img{
